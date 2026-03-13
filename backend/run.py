@@ -1,7 +1,7 @@
-from app import create_app
+# backend/run.py
+from backend.app import create_app
+
 app = create_app()
-
-
 
 
     
