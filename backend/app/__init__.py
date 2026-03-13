@@ -2,8 +2,8 @@ from flask import Flask
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
-from app.config import Config
-from app.database.db import db
+from .config import Config
+from .database.db import db
 
 
 jwt = JWTManager()
@@ -17,9 +17,9 @@ def create_app():
     app.config.from_object(Config)
     
     
-    from app.models.user_model import User
+    from .models.user_model import User
     
-    from app.routes.user_routes import user_blueprint
+    from .routes.user_routes import user_blueprint
     app.register_blueprint(user_blueprint)
     
     
