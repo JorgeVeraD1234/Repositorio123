@@ -3,11 +3,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# backend/app/config.py
 class Config:
-    DATABASE_URL = os.getenv("DATABASE_URL")
-
-    SQLALCHEMY_DATABASE_URI = DATABASE_URL
+    SQLALCHEMY_DATABASE_URI = "postgresql://postgres:TfjOAypcGyngOQbUVmsNFozjmqyYxaVp@postgres.railway.internal:5432/railway"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-
-    SECRET_KEY = os.getenv("SECRET_KEY", "default_secret")
-    JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", "default_jwt")
+    SECRET_KEY = "algo_seguro"
+    JWT_SECRET_KEY = "algo_seguro"
