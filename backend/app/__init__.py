@@ -14,15 +14,15 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
-    # registrar modelos y rutas
-    from .models.user_model import User
-    from .routes.user_routes import user_blueprint
-    app.register_blueprint(user_blueprint)
-
-    # inicializar extensiones
+    # inicializar extensiones primero
     db.init_app(app)
     jwt.init_app(app)
     migrate.init_app(app, db)
     CORS(app)
+
+    # luego importar modelos y rutas
+    from .routes.user_routes import user_blueprint
+
+    app.register_blueprint(user_blueprint)
 
     return app

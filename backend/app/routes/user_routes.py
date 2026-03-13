@@ -21,6 +21,7 @@ def route_create_useer():
 @user_blueprint.route("/get-all", methods=["GET"])
 def get_all():
     users = get_users()
+    
     return [user.to_dict() for user in users]
 
 
