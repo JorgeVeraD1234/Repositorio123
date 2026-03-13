@@ -22,4 +22,6 @@ def create_user(data):
     return new_user
 
 def get_users():
-    return User.query.all()
+    users = User.query.all()
+    # Convertimos cada objeto User a un diccionario
+    return [{"id": u.id, "name": u.name, "email": u.email} for u in users]
