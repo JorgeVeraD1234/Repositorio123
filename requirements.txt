@@ -8,3 +8,4 @@ marshmallow
 marshmallow-sqlalchemy
 Werkzeug
 gunicorn
+psycopg2
