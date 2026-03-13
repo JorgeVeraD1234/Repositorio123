@@ -1,11 +1,8 @@
-# backend/run.py
+import os
 from backend.app import create_app
 
 app = create_app()
 
-
-    
-""" 
-Para ejecutar el proyecto
-python -m flask run
-"""
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))  # Railway asigna el puerto vía variable de entorno
+    app.run(host="0.0.0.0", port=port)

@@ -1,1 +1,1 @@
-web: gunicorn run:app --chdir backend
+web: gunicorn run:app --chdir backend --bind 0.0.0.0:$PORT
