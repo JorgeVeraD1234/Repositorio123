@@ -1,5 +1,5 @@
-from flask import request, Blueprint
-from app.controllers.user_controller import create_user, get_users
+from flask import Blueprint, request
+from ..controllers.user_controller import create_user, get_users
 
 user_blueprint = Blueprint("users", __name__, url_prefix="/user")
 
