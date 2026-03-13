@@ -12,7 +12,7 @@ export default function App() {
 
   // Función para obtener todos los usuarios
   const obtenerUsuarios = () => {
-    fetch(`${API_URL}/user/get-all`)
+    fetch(`${API_URL}/user/`)
       .then(res => {
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         return res.json();
