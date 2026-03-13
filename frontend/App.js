@@ -8,7 +8,7 @@ export default function App() {
   const [password, setPassword] = useState('');
 
   // Cambia esta URL por la de tu backend Flask vewgvk
-  const API_URL = "http://127.0.0.1:5000";
+  const API_URL = "http://127.0.0.1:https://repositorio123-production.up.railway.app";
 
   // Obtener usuarios al cargar la app
 useEffect(() => {
