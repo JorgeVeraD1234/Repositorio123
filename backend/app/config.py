@@ -6,7 +6,7 @@ load_dotenv()
 # backend/app/config.py
 """ 
 "postgresql://postgres:TfjOAypcGyngOQbUVmsNFozjmqyYxaVp@switchback.proxy.rlwy.net:58066/railway"
-
+h
 """
 class Config:
     SQLALCHEMY_DATABASE_URI ="postgresql://postgres:TfjOAypcGyngOQbUVmsNFozjmqyYxaVp@switchback.proxy.rlwy.net:58066/railway"
