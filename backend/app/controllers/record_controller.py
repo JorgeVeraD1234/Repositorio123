@@ -1,6 +1,5 @@
 from app.database.db import db
-from ..models.record_model import Record
-
+from app.models import Record
 
 
 def create_record(data):  
