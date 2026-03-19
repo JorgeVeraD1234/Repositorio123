@@ -7,6 +7,10 @@ class User(db.Model):
     name = db.Column(db.String(120), nullable=False)
     email = db.Column(db.String(120), nullable=False, unique=True)
     password = db.Column(db.String(500), nullable=False)
+    
+    
+    records = db.relationship("Record", backref="user", lazy = True)
+
 
     def to_dict(self):
         return {

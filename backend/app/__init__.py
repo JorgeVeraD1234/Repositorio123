@@ -22,7 +22,11 @@ def create_app():
 
     # luego importar modelos y rutas
     from .routes.user_routes import user_blueprint
+    from .routes.record_routes import record_blueprint
+
 
     app.register_blueprint(user_blueprint)
+    app.register_blueprint(record_blueprint)
+
 
     return app
