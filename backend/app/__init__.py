@@ -22,8 +22,8 @@ def create_app():
     CORS(app)
 
     # luego importar modelos y rutas
-    from app.models.user_model import User
     from app.models.record_model import Record
+    from app.models.user_model import User
     from .routes.user_routes import user_blueprint
     from .routes.record_routes import record_blueprint
 
