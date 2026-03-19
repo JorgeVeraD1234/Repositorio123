@@ -21,8 +21,8 @@ def create_app():
     migrate.init_app(app, db)
     CORS(app)
 
-
-    from app.models import User, Record
+    """ Me falta add . y pushear al repo para despues railway """
+    import app.models
     from .routes.user_routes import user_blueprint
     from .routes.record_routes import record_blueprint
 
