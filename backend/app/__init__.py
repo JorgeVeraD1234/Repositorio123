@@ -6,8 +6,7 @@ from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
 from .config import Config
 from .database.db import db
-from app.models.user_model import User
-from app.models.record_model import Record
+
 
 jwt = JWTManager()
 migrate = Migrate()
@@ -23,6 +22,8 @@ def create_app():
     CORS(app)
 
     # luego importar modelos y rutas
+    from app.models.user_model import User
+    from app.models.record_model import Record
     from .routes.user_routes import user_blueprint
     from .routes.record_routes import record_blueprint
 
