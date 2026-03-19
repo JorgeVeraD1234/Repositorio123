@@ -1,5 +1,4 @@
 from ..database.db import db  # <-- la misma instancia que init_app()
-from app.models.record_model import Record
 
 class User(db.Model):
     __tablename__ = "users"
