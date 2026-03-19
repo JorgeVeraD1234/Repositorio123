@@ -1,4 +1,4 @@
-from ..database.db import db  # <-- la misma instancia que init_app()
+from app.database.db import db  # <-- la misma instancia que init_app()
 
 
 

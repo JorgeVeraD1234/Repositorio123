@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from app.controllers.record_controller import create_record, get_records
+from ..controllers.record_controller import create_record, get_records
 
 record_blueprint = Blueprint("records", __name__, url_prefix="/record")
 
