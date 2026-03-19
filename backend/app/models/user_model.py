@@ -9,7 +9,7 @@ class User(db.Model):
     password = db.Column(db.String(500), nullable=False)
     
     
-    records = db.relationship("Record", backref="user", lazy = True)
+    records = db.relationship("Record", backref="user", lazy=True)
 
 
     def to_dict(self):
