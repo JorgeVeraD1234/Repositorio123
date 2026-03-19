@@ -21,8 +21,7 @@ def create_app():
     migrate.init_app(app, db)
     CORS(app)
 
-    # luego importar modelos y rutas
-    # luego importar modelos y rutas
+
     from app.models import User, Record
     from .routes.user_routes import user_blueprint
     from .routes.record_routes import record_blueprint

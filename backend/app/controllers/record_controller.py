@@ -1,5 +1,5 @@
 from app.models.record_model import Record
-from app import db
+from ..database.db import db
 
 
 
