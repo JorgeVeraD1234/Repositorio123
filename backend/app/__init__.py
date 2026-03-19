@@ -12,14 +12,14 @@ jwt = JWTManager()
 migrate = Migrate()
 
 def create_app():
-    app = Flask(__name__)
-    app.config.from_object(Config)
+    flask_app = Flask(__name__)
+    flask_app.config.from_object(Config)
 
     # inicializar extensiones primero
-    db.init_app(app)
-    jwt.init_app(app)
-    migrate.init_app(app, db)
-    CORS(app)
+    db.init_app(flask_app)
+    jwt.init_app(flask_app)
+    migrate.init_app(flask_app, db)
+    CORS(flask_app)
 
     """ Me falta add . y pushear al repo para despues railway """
     import app.models
@@ -27,8 +27,8 @@ def create_app():
     from .routes.record_routes import record_blueprint
 
 
-    app.register_blueprint(user_blueprint)
-    app.register_blueprint(record_blueprint)
+    flask_app.register_blueprint(user_blueprint)
+    flask_app.register_blueprint(record_blueprint)
 
 
-    return app
+    return flask_app
