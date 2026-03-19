@@ -15,5 +15,6 @@ class Record(db.Model):
         return {
             "id": self.id,
             "name": self.name,
-            "description": self.description
+            "description": self.description,
+            "user_id": self.user_id   # 🔥 AGREGAR ESTO
         }
